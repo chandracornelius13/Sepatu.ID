@@ -1,0 +1,347 @@
+/* ========================================= */
+/* BAGIAN 1: RESET & HEADER/FOOTER (JANGAN DIHAPUS) */
+/* ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #121212; 
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #252525;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-logo-container { flex: 1; }
+.header-logo { height: 50px; }
+
+.main-nav {
+    flex: 2;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: #007bff;
+}
+
+.header-icons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #121212;
+    padding: 40px 50px 20px;
+    border-top: 1px solid #333;
+    color: #888;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+.footer-content h4 { color: #fff; margin-bottom: 15px; }
+.footer-content p, .footer-content li, .footer-content a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    list-style: none;
+}
+.about-us { text-align: justify; }
+.copyright { text-align: center; font-size: 0.8rem; margin-top: 20px; }
+
+
+/* ========================================= */
+/* BAGIAN 2: HALAMAN DAFTAR PRODUK (GRID & FILTER) */
+/* ========================================= */
+.page-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Sidebar Filter */
+.sidebar {
+    width: 200px;
+    padding-right: 30px;
+    border-right: 1px solid #333;
+    min-height: 80vh;
+}
+
+.filter-header h3 {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.filter-group h4 {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.filter-item input[type="checkbox"] {
+    accent-color: #007bff;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.filter-item label {
+    font-size: 0.9rem;
+    color: #bbb;
+    cursor: pointer;
+}
+
+/* Product Content */
+.product-section {
+    flex: 1;
+    padding-left: 30px;
+}
+
+.product-count-bar {
+    background-color: #252525;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    text-decoration: none; /* Agar link tidak ada garis bawah */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.card-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.card-info { text-align: center; }
+.brand { font-size: 0.8rem; color: #888; display: block; margin-bottom: 5px; }
+.product-name { font-size: 1rem; font-weight: bold; color: #eee; margin-bottom: 5px; line-height: 1.2; }
+.price { font-size: 1rem; color: #007bff; font-weight: bold; }
+
+
+/* ========================================= */
+/* BAGIAN 3: HALAMAN DETAIL PRODUK (SEPERTI GAMBAR NIKE MERAH) */
+/* ========================================= */
+.detail-page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    padding: 40px 20px;
+    background-color: #121212;
+}
+
+.detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    max-width: 1100px;
+    width: 100%;
+    align-items: center;
+}
+
+/* Gambar Detail (Kiri) */
+.detail-image-box {
+    flex: 1;
+    min-width: 350px;
+    background-color: #fff; /* Warna putih persis referensi */
+    border-radius: 24px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.detail-image-box img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 15px rgba(0,0,0,0.2));
+}
+
+/* Info Detail (Kanan) */
+.detail-info {
+    flex: 1;
+    min-width: 350px;
+    text-align: left;
+}
+
+.detail-sku {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.detail-brand {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.detail-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.detail-price {
+    font-size: 1.5rem;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Pilihan Ukuran */
+.size-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 380px;
+    margin-bottom: 30px;
+}
+
+.size-btn {
+    background-color: #666;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.size-btn:hover, .size-btn.active {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Tombol Shopee */
+.btn-shopee {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-shopee:hover {
+    background-color: #e6e6e6;
+    transform: translateY(-2px);
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .product-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .main-header { padding: 15px 20px; flex-direction: column; gap: 15px; }
+    .main-nav ul { gap: 15px; flex-wrap: wrap; }
+    
+    .page-container, .detail-container { flex-direction: column; }
+    .sidebar { width: 100%; border-right: none; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #333; }
+    .product-section { padding-left: 0; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    
+    .detail-image-box { width: 100%; min-width: auto; }
+    .detail-info { width: 100%; }
+}

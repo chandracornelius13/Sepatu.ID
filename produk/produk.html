@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katalog Produk - SEPATU.ID</title>
+    <link rel="stylesheet" href="../utama/utama.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-logo">
+        <a href="../utama/utama.html"><img src="../asset/picture/logo.png" alt="Logo" /></a>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../utama/utama.html">Home</a></li>
+          <li><a href="../utama/tentang.html">Tentang</a></li>
+          <li><a href="../produk/produk.html">Katalog</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Cari sepatu (ex: Samba)..." autocomplete="off" />
+          <i class="fas fa-search search-icon"></i>
+
+          <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <a href="../index.html" class="btn-logout">Logout</a>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+         </div>
+      </div>
+    </header>
+
+<div class="catalog-container">
+      
+      <div class="mobile-filter-trigger">
+          <button id="openFilterBtn">
+              <i class="fas fa-filter"></i> FILTER
+          </button>
+      </div>
+
+      <div class="filter-overlay" id="filterOverlay"></div>
+
+      <aside class="sidebar" id="filterSidebar" data-aos="fade-right">
+        
+        <div class="filter-header">
+            <h3>FILTER</h3>
+            <button id="closeFilterBtn" class="close-filter">&times;</button>
+        </div>
+
+        <div class="filter-group">
+          <h4>BRAND</h4>
+          <div class="filter-item"><input type="checkbox" id="nike" /> <label for="nike">Nike</label></div>
+          <div class="filter-item"><input type="checkbox" id="adidas" /> <label for="adidas">Adidas</label></div>
+          <div class="filter-item"><input type="checkbox" id="puma" /> <label for="puma">Puma</label></div>
+        </div>
+
+        <div class="filter-group">
+          <h4>HARGA</h4>
+          <div class="filter-item"><input type="checkbox" id="p1" /> <label for="p1">Di bawah 1 Juta</label></div>
+          <div class="filter-item"><input type="checkbox" id="p2" /> <label for="p2">1 - 2 Juta</label></div>
+          <div class="filter-item"><input type="checkbox" id="p3" /> <label for="p3">Di atas 2 Juta</label></div>
+        </div>
+      </aside>
+
+      <main class="catalog-content">
+        <div class="product-grid">
+          
+          <a href="Nike Dunk Low.html" class="product-card" data-aos="fade-up">
+            <div class="card-img-wrapper">
+              <img src="../asset/picture/Nike Dunk Low.webp" alt="Nike Dunk" />
+            </div>
+            <div class="card-info">
+              <span class="brand">NIKE</span>
+              <h3>Dunk Low Retro</h3>
+              <span class="price">Rp 506.850</span>
+            </div>
+          </a>
+
+          <a href="(KERJAIN p6000).html" class="product-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-img-wrapper">
+              <img src="../asset/picture/p6000.webp" alt="Nike P6000" />
+            </div>
+            <div class="card-info">
+              <span class="brand">NIKE</span>
+              <h3>Nike P-6000</h3>
+              <span class="price">Rp 2.325.400</span>
+            </div>
+          </a>
+
+          <a href="(KERJAIN SAMBA).html" class="product-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-img-wrapper">
+              <img src="../asset/picture/Samba.webp" alt="Adidas Samba" />
+            </div>
+            <div class="card-info">
+              <span class="brand">ADIDAS</span>
+              <h3>Samba OG</h3>
+              <span class="price">Rp 1.525.000</span>
+            </div>
+          </a>
+
+          <a href="(KERJAIN SPEZIAL).html" class="product-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-img-wrapper">
+              <img src="../asset/picture/Spezial.webp" alt="Adidas Spezial" />
+            </div>
+            <div class="card-info">
+              <span class="brand">ADIDAS</span>
+              <h3>Handball Spezial</h3>
+              <span class="price">Rp 899.000</span>
+            </div>
+          </a>
+
+          <a href="(KERJAIN SPEEDCAT).html" class="product-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-img-wrapper">
+              <img src="../asset/picture/Speedcat.webp" alt="Puma Speedcat" />
+            </div>
+            <div class="card-info">
+              <span class="brand">PUMA</span>
+              <h3>Speedcat OG</h3>
+              <span class="price">Rp 1.700.000</span>
+            </div>
+          </a>
+
+          <a href="(KERJAIN PALERMO).html" class="product-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-img-wrapper">
+              <img src="../asset/picture/PALERMO.webp" alt="Puma Palermo" />
+            </div>
+            <div class="card-info">
+              <span class="brand">PUMA</span>
+              <h3>Puma Palermo</h3>
+              <span class="price">Rp 1.999.000</span>
+            </div>
+          </a>
+
+          <a href="(KERJAIN SL72).html" class="product-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-img-wrapper">
+              <img src="../asset/picture/SL72.webp" alt="Adidas SL72" />
+            </div>
+            <div class="card-info">
+              <span class="brand">ADIDAS</span>
+              <h3>Adidas SL 72 RS</h3>
+              <span class="price">Rp 1.600.000</span>
+            </div>
+          </a>
+
+          <a href="(KERJAIN AIR MAX).html" class="product-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-img-wrapper">
+              <img src="../asset/picture/AIR MAX.webp" alt="Nike Air Max" />
+            </div>
+            <div class="card-info">
+              <span class="brand">NIKE</span>
+              <h3>Air Max 90</h3>
+              <span class="price">Rp 2.200.000</span>
+            </div>
+          </a>
+
+          <a href="(KERJAIN TURINO).html" class="product-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-img-wrapper">
+              <img src="../asset/picture/Turino.webp" alt="Puma Turino" />
+            </div>
+            <div class="card-info">
+              <span class="brand">PUMA</span>
+              <h3>Puma Turino</h3>
+              <span class="price">Rp 1.200.000</span>
+            </div>
+          </a>
+
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <div class="copyright">&copy; 2025 Sepatu.id</div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/filter.js"></script>
+    <script src="../javascript/navbar.js"></script>
+  </body>
+</html>

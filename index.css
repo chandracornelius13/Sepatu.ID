@@ -1,0 +1,214 @@
+/* Import Font Keren (Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Ganti font jadi Poppins */
+}
+
+body {
+    background-color: #121212;
+    /* Background dengan gradasi halus agar tidak flat */
+    background-image: radial-gradient(circle at 50% 50%, #1e2530 0%, #0d0d0d 100%);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER ATAS --- */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: absolute; /* Agar header mengambang di atas */
+    width: 100%;
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.header-img {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+/* --- WRAPPER PEMUSATAN --- */
+.login-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px; /* Padding extra biar ga mepet header */
+}
+
+/* --- KARTU LOGIN (GLASSMORPHISM) --- */
+.login-card {
+    /* Efek Kaca Gelap */
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px; /* Sedikit lebih lebar agar lega */
+    
+    /* BENTUK: Sudut melengkung (tidak kotak kaku) */
+    border-radius: 25px; 
+    
+    text-align: center;
+    /* Bayangan lembut (Glow) */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 123, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hiasan Cahaya di atas Card (Opsional) */
+.login-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* Logo Tengah */
+.center-logo-area {
+    margin-bottom: 20px;
+}
+
+.center-img {
+    width: 120px; /* Diperkecil sedikit agar proporsional */
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(0,123,255,0.5)); /* Efek glow pada logo */
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* --- FORM INPUT --- */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 20px;
+    background-color: rgba(0, 0, 0, 0.3); /* Input semi transparan */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px; /* Input berbentuk pil (bulat) */
+    color: #fff;
+    outline: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.input-group input::placeholder {
+    color: #777;
+}
+
+/* --- TOMBOL --- */
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary {
+    background: transparent;
+    color: #aaa;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px; /* Tombol bulat */
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.6);
+}
+
+.btn-register-new {
+    width: 100%;
+    padding: 14px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-register-new:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+.forgot-pass {
+    margin: 20px 0;
+    font-size: 0.85rem;
+}
+
+.forgot-pass a {
+    color: #888;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.forgot-pass a:hover {
+    color: #007bff;
+}
