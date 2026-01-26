@@ -3,71 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detail Produk - Nike Dunk Low</title>
-  <link rel="stylesheet" href="produk.css"> 
+  <title>Detail Produk - SEPATU.ID</title> 
+  <link rel="stylesheet" href="../utama/utama.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-  <header class="main-header" data-aos="fade-down">
-    <div class="header-logo-container">
-      <img src="../asset/picture/logo.png" alt="Logo" class="header-logo">
+  <header class="main-header">
+    <div class="header-logo">
+      <a href="../utama/utama.html"><img src="../asset/picture/logo.png" alt="Logo"></a>
     </div>
     <nav class="main-nav">
       <ul>
-        <li><a href="../index.html">Login</a></li>
+        <li><a href="../utama/utama.html">Home</a></li>
         <li><a href="../utama/tentang.html">Tentang</a></li>
-        <li><a href="produk.html">Produk</a></li>
-        <li><a href="#footer">Kontak</a></li>
+        <li><a href="produk.html">Katalog</a></li>
       </ul>
     </nav>
-    <div class="header-icons"></div>
+    <div class="header-right">
+         <a href="#" style="color:#fff;"><i class="fas fa-shopping-cart"></i></a>
+         <a href="../index.html" class="btn-logout">Logout</a>
+    </div>
   </header>
 
-  <main class="detail-page-wrapper">
-    <div class="detail-container">
-        
-        <div class="detail-image-box" data-aos="fade-right">
-            <img src="../asset/picture/AIR MAX.webp" alt="Nike Dunk Low">
+  <main class="detail-wrapper">
+    <div class="detail-img" data-aos="fade-right">
+        <img src="../asset/picture/AIR MAX.webp" alt="Nike Air Max"> 
+    </div>
+
+    <div class="detail-content" data-aos="fade-left">
+        <p class="detail-sku">SKU: NIKE-AM90-2025</p>
+        <h3 style="color:var(--text-muted); text-transform:uppercase;">NIKE</h3> 
+        <h1 class="detail-title">Nike Air Max 90</h1> 
+        <p class="detail-price">Rp 2.200.000</p> 
+        <p style="margin-bottom:20px; color:#aaa;">
+            100% Authentic. Ikon streetwear dengan bantalan Air Max yang legendaris. Nyaman dipakai seharian dengan gaya timeless.
+        </p>
+
+        <h4 style="margin-bottom:10px;">Pilih Ukuran:</h4>
+        <div class="size-grid">
+            <button class="size-btn">40</button>
+            <button class="size-btn">41</button>
+            <button class="size-btn">42</button>
+            <button class="size-btn">43</button>
+            <button class="size-btn">44</button>
         </div>
 
-        <div class="detail-info" data-aos="fade-left">
-            <p class="detail-sku">HF5441-104</p>
-            <h3 class="detail-brand">NIKE</h3>
-            <h1 class="detail-title">Nike AIR MAX</h1>
-            <p class="detail-price">RP 2.325.400</p>
-
-            <div class="size-selector">
-                <button class="size-btn">7/40</button>
-                <button class="size-btn">7/41</button>
-                <button class="size-btn">7/42</button>
-                <button class="size-btn">8/43</button>
-                <button class="size-btn">8/44</button>
-                <button class="size-btn">8/45</button>
-            </div>
-            <a href="https://s.shopee.co.id/20oDPLNkZc" class="btn-shopee">ORDER VIA SHOPEE</a>
+        <div style="margin-top: 30px;">
+            <a href="https://s.shopee.co.id/20oDPLNkZc" class="btn-primary" style="width:100%; text-align:center; display:block;">BELI DI SHOPEE</a>
         </div>
     </div>
   </main>
 
-  <footer id="footer" data-aos="fade-up">
-    <div class="footer-content">
-      <div class="contact-info">
-        <h4>Our Contact</h4>
-        <p>Email: <a href="mailto:info@webku.com"> Sepatu.id@gmail.com</a></p>
-      </div>
-      <div class="footer-links">
-        <h4>Help</h4>
-        <ul>
-          <li><a href="https://forms.gle/qmqZn2kEW9Z5x6mbA">Report</a></li>
-        </ul>
-      </div>
-      <div class="about-us">
-        <h4>About Us</h4>
-        <p>Di bangun pada tahun 2025.</p>
-      </div>
-    </div>
-    <p class="copyright">&copy; 2025 Sepatu.id. All rights reserved.</p>
+  <footer>
+    <div class="copyright">&copy; 2025 Sepatu.id</div>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
