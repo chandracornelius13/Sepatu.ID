@@ -114,3 +114,65 @@ Project ini merupakan **Static Website**, tidak membutuhkan backend atau Node.js
 ```bash
 git clone https://github.com/username-anda/sepatu-id.git
 cd sepatu-id
+```
+
+## ▶️ Menjalankan Project
+
+Project ini merupakan **Static Website**, sehingga tidak memerlukan backend atau server khusus.
+
+### Opsi A — VS Code Live Server (Disarankan)
+
+1. Buka folder project di **Visual Studio Code**
+2. Install ekstensi **Live Server**
+3. Klik kanan pada file `index.html`
+4. Pilih **Open with Live Server**
+
+### Opsi B — Manual
+
+1. Buka **File Explorer**
+2. Masuk ke folder project
+3. Double click file `index.html` untuk membuka di browser
+
+---
+
+## ⚠️ Catatan Pengembangan
+
+### 📦 Data Produk
+Data produk untuk fitur **Live Search** disimpan dalam array `products`  
+di file:
+
+/js/search.js
+
+
+Jika ingin menambahkan produk baru, pastikan untuk meng-update array tersebut.
+
+### 🔗 Link Pembelian
+Tombol **Beli** saat ini diarahkan ke marketplace eksternal  
+(contoh: **Shopee**) sebagai keperluan demonstrasi.
+
+---
+
+## 🤝 Kredit & Sumber
+
+- **Inspirasi Desain**  
+  Modern E-Commerce UI & Glassmorphism Trends
+
+- **Gambar Produk**  
+  Official Website **Nike**, **Adidas**, **Puma**  
+  *(Digunakan untuk keperluan edukasi & portofolio)*
+
+---
+
+## 📄 Lisensi
+
+Project ini dibuat untuk tujuan **pembelajaran dan portofolio**.  
+Seluruh merek dagang, logo, dan aset brand merupakan milik  
+pemegang hak cipta masing-masing.
+
+---
+
+<div align="center">
+  Made with ❤️ using HTML, CSS & JavaScript  
+  <br>
+  <strong>by chandracornelius13</strong>
+</div>
