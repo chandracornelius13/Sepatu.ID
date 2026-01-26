@@ -116,7 +116,7 @@ git clone https://github.com/username-anda/sepatu-id.git
 cd sepatu-id
 ```
 
-## ▶️ Menjalankan Project
+## 2️⃣ Menjalankan Project
 
 Project ini merupakan **Static Website**, sehingga tidak memerlukan backend atau server khusus.
 
@@ -139,9 +139,7 @@ Project ini merupakan **Static Website**, sehingga tidak memerlukan backend atau
 
 ### 📦 Data Produk
 Data produk untuk fitur **Live Search** disimpan dalam array `products`  
-di file:
-
-/js/search.js
+di file: `/js/search.js`
 
 
 Jika ingin menambahkan produk baru, pastikan untuk meng-update array tersebut.
