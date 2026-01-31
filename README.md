@@ -43,7 +43,7 @@ Project ini dibangun dengan pendekatan desain:
 
 ## 📸 Preview
 
-<img width="100%" alt="Sepatu.id Preview" src="https://via.placeholder.com/1200x600.png?text=Preview+Website+Sepatu.ID" />
+<img width="100%" alt="Sepatu.id Preview" src="https://github.com/user-attachments/assets/be1ffa30-74ed-46a8-b7b0-230345f1d690" />
 
 ---
 
