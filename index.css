@@ -1,19 +1,68 @@
 /* Import Font Keren (Poppins) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+/* --- CSS VARIABLES (THEMING) --- */
+:root {
+    /* Default: LIGHT MODE */
+    --bg-color: #f0f2f5;
+    --bg-gradient: radial-gradient(circle at 50% 50%, #ffffff 0%, #e1e4e8 100%);
+    --text-main: #333333;
+    --text-muted: #666666;
+    --text-placeholder: #888888;
+    
+    --card-bg: rgba(255, 255, 255, 0.75);
+    --card-border: rgba(0, 0, 0, 0.05);
+    --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 123, 255, 0.1);
+    
+    --input-bg: rgba(255, 255, 255, 0.9);
+    --input-border: rgba(0, 0, 0, 0.1);
+    --input-focus-shadow: rgba(0, 123, 255, 0.2);
+    
+    --btn-primary-border: rgba(0, 0, 0, 0.1);
+    --btn-primary-text: #555;
+    --btn-primary-hover-bg: rgba(0, 0, 0, 0.05);
+    --btn-primary-hover-color: #000;
+    
+    --accent-color: #007bff;
+    --accent-hover: #0056b3;
+    --white-always: #fff; /* Untuk teks di tombol solid */
+}
+
+[data-theme="dark"] {
+    /* DARK MODE (Matching original design) */
+    --bg-color: #121212;
+    --bg-gradient: radial-gradient(circle at 50% 50%, #1e2530 0%, #0d0d0d 100%);
+    --text-main: #ffffff;
+    --text-muted: #aaaaaa;
+    --text-placeholder: #777777;
+    
+    --card-bg: rgba(30, 30, 30, 0.6);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 123, 255, 0.2);
+    
+    --input-bg: rgba(0, 0, 0, 0.3);
+    --input-border: rgba(255, 255, 255, 0.1);
+    --input-focus-shadow: rgba(0, 123, 255, 0.3);
+    
+    --btn-primary-border: rgba(255, 255, 255, 0.2);
+    --btn-primary-text: #aaaaaa;
+    --btn-primary-hover-bg: transparent;
+    --btn-primary-hover-color: #ffffff;
+}
+
 /* Reset dasar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Ganti font jadi Poppins */
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition for theme toggle */
 }
 
 body {
-    background-color: #121212;
-    /* Background dengan gradasi halus agar tidak flat */
-    background-image: radial-gradient(circle at 50% 50%, #1e2530 0%, #0d0d0d 100%);
-    color: #fff;
+    background-color: var(--bg-color);
+    background-image: var(--bg-gradient);
+    color: var(--text-main);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -25,7 +74,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    position: absolute; /* Agar header mengambang di atas */
+    position: absolute;
     width: 100%;
     z-index: 10;
 }
@@ -33,7 +82,7 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
-    color: #fff;
+    color: var(--text-main);
     font-weight: 700;
     font-size: 1.2rem;
     letter-spacing: 1px;
@@ -45,38 +94,51 @@ body {
     margin-right: 10px;
 }
 
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Jarak antar elemen di header */
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* --- WRAPPER PEMUSATAN --- */
 .login-wrapper {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 20px; /* Padding extra biar ga mepet header */
+    padding: 80px 20px;
 }
 
 /* --- KARTU LOGIN (GLASSMORPHISM) --- */
 .login-card {
-    /* Efek Kaca Gelap */
-    background: rgba(30, 30, 30, 0.6);
+    background: var(--card-bg);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--card-border);
     
     padding: 40px 30px;
     width: 100%;
-    max-width: 400px; /* Sedikit lebih lebar agar lega */
+    max-width: 400px;
     
-    /* BENTUK: Sudut melengkung (tidak kotak kaku) */
     border-radius: 25px; 
-    
     text-align: center;
-    /* Bayangan lembut (Glow) */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 123, 255, 0.2);
+    box-shadow: var(--card-shadow);
     position: relative;
     overflow: hidden;
 }
 
-/* Hiasan Cahaya di atas Card (Opsional) */
+/* Hiasan Cahaya di atas Card */
 .login-card::before {
     content: '';
     position: absolute;
@@ -94,20 +156,20 @@ body {
 }
 
 .center-img {
-    width: 120px; /* Diperkecil sedikit agar proporsional */
+    width: 120px;
     height: auto;
-    filter: drop-shadow(0 0 10px rgba(0,123,255,0.5)); /* Efek glow pada logo */
+    filter: drop-shadow(0 0 10px rgba(0,123,255,0.5));
 }
 
 h2 {
-    color: #fff;
+    color: var(--text-main);
     margin-bottom: 5px;
     font-size: 2rem;
     font-weight: 600;
 }
 
 .subtitle {
-    color: #aaa;
+    color: var(--text-muted);
     font-size: 0.9rem;
     margin-bottom: 30px;
     font-weight: 300;
@@ -121,23 +183,23 @@ h2 {
 .input-group input {
     width: 100%;
     padding: 14px 20px;
-    background-color: rgba(0, 0, 0, 0.3); /* Input semi transparan */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50px; /* Input berbentuk pil (bulat) */
-    color: #fff;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 50px;
+    color: var(--text-main);
     outline: none;
     font-size: 0.95rem;
     transition: 0.3s;
 }
 
 .input-group input:focus {
-    border-color: #007bff;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    border-color: var(--accent-color);
+    background-color: var(--input-bg); /* Keep base opacity/color */
+    box-shadow: 0 0 10px var(--input-focus-shadow);
 }
 
 .input-group input::placeholder {
-    color: #777;
+    color: var(--text-placeholder);
 }
 
 /* --- TOMBOL --- */
@@ -147,8 +209,8 @@ button {
 
 .btn-primary {
     background: transparent;
-    color: #aaa;
-    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--btn-primary-text);
+    border: 1px solid var(--btn-primary-border);
     padding: 8px 20px;
     border-radius: 50px;
     text-decoration: none;
@@ -157,8 +219,9 @@ button {
 }
 
 .btn-primary:hover {
-    color: #fff;
-    border-color: #fff;
+    color: var(--btn-primary-hover-color);
+    border-color: var(--text-main);
+    background-color: var(--btn-primary-hover-bg);
 }
 
 .btn-login {
@@ -168,7 +231,7 @@ button {
     color: white;
     font-weight: 600;
     border: none;
-    border-radius: 50px; /* Tombol bulat */
+    border-radius: 50px;
     cursor: pointer;
     margin-top: 10px;
     font-size: 1rem;
@@ -185,8 +248,8 @@ button {
     width: 100%;
     padding: 14px;
     background: transparent;
-    color: #fff;
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    border: 2px solid var(--input-border);
     border-radius: 50px;
     font-weight: 600;
     cursor: pointer;
@@ -194,8 +257,8 @@ button {
 }
 
 .btn-register-new:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: #fff;
+    background: rgba(125, 125, 125, 0.1);
+    border-color: var(--text-main);
 }
 
 .forgot-pass {
@@ -204,11 +267,11 @@ button {
 }
 
 .forgot-pass a {
-    color: #888;
+    color: var(--text-placeholder);
     text-decoration: none;
     transition: 0.3s;
 }
 
 .forgot-pass a:hover {
-    color: #007bff;
+    color: var(--accent-color);
 }
